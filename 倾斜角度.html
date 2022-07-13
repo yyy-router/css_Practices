@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css属性练习</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2ecc71;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.box1 {
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    background-color: #ecf0f1;
+    transform: skew(-20deg);
+    /* margin: 100px; */
+}
+
+.box2 {
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    background-color: #ecf0f1;
+    transform: rotate(20deg);
+}
+
+.box3 {
+    border-radius: 10px;
+    width: 200px;
+    height: 100px;
+    background-color: #ecf0f1;
+    transform: rotate3d(5, 5, 5, 20deg);
+}
+</style>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黏性定位</title>
+</head>
+
+<body>
+    <div>
+        <dl>
+            <dt>A</dt>
+            <dd>An</dd>
+            <dd>Ap</dd>
+            <dd>Ad</dd>
+            <dd>Ac</dd>
+            <dd>Am</dd>
+            <dd>Ab</dd>
+        </dl>
+        <dl>
+            <dt>B</dt>
+            <dd>An</dd>
+            <dd>Ap</dd>
+            <dd>Ad</dd>
+            <dd>Ac</dd>
+            <dd>Am</dd>
+            <dd>Ab</dd>
+        </dl>
+        <dl>
+            <dt>C</dt>
+            <dd>An</dd>
+            <dd>Ap</dd>
+            <dd>Ad</dd>
+            <dd>Ac</dd>
+            <dd>Am</dd>
+            <dd>Ab</dd>
+        </dl>
+        <dl>
+            <dt>D</dt>
+            <dd>An</dd>
+            <dd>Ap</dd>
+            <dd>Ad</dd>
+            <dd>Ac</dd>
+            <dd>Am</dd>
+            <dd>Ab</dd>
+        </dl>
+        <dl>
+            <dt>E</dt>
+            <dd>An</dd>
+            <dd>Ap</dd>
+            <dd>Ad</dd>
+            <dd>Ac</dd>
+            <dd>Am</dd>
+            <dd>Ab</dd>
+        </dl>
+    </div>
+
+</body>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    div {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        line-height: 50px;
+    }
+
+    dl {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        top: 20px;
+    }
+
+    dt {
+        width: 100%;
+        height: auto;
+        background-color: #7f8fa6;
+        color: #FFF;
+        /* 开启黏性定位 */
+        position: sticky;
+        /* dt会依次找他的父元素，直到找到第一个有设置overflow属性的元素，
+        并且在和该元素的top距离为0时dt元素固定，如果父级元素都没设置overflow属性，那么这个dt就相对于窗口定位 */
+        top: 0;
+    }
+
+    dd {
+        font-size: 20px;
+        border-bottom: 2px solid #dcdde1;
+    }
+</style>
+
+</html>
