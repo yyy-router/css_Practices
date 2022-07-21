@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>标签效果</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="tag">审核未通过</div>
+        </div>
+    </div>
+</body>
+<style>
+    * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    background-color: #ecf0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    height: 550px;
+    background-color: #bdc3c7;
+    border-radius: 13px;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+}
+
+.tag {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: -5px;
+    top: -2px;
+    border-radius: 4px 4px 4px 0px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    color: #FFF;
+    user-select: none;
+    /* 添加上高光效果 */
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.4), transparent) var(--bg, #EA3447);
+    background-blend-mode: soft-light;
+
+}
+
+.tag::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    filter: brightness(.7);
+    background-color: inherit;
+    top: calc((100vw-550px)/2);
+    margin-top: 40px;
+    margin-left: -13px;
+    /* 生成三角 */
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+
+}
+</style>
+</html>
